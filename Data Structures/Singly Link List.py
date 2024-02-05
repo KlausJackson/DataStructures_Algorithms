@@ -218,15 +218,30 @@ class LinkList():
         mid = self.middle()
         # Reverse the second half of the linked list
         next_half = None
+        
         while mid:
-            # start at the middle node, point it to None.
-            
+            # point temp to mid.next.
             temp = mid.next
+            # point mid to the node before it (this step reverse the pointer).
             mid.next = next_half
+            # update the next_half and mid pointer to the node after it
+            # in the second half to continue reverse the pointer.
+            next_half = mid
+            mid = temp
+            
+            # Visual example of pointer's orders in the beginning:
+            # None     <-    10          5          21
+            #   ^            ^           ^          ^
+            # next_half     mid         temp        temp 
+            #               next_half    mid        temp    (in the next iteration)
    
-   
-   
-   
+        while next_half:
+            now = self.head
+            if now.value != next_half.value:
+                return False
+            now = now.next
+            next_half = next_half.next
+        return True    
    
    
 def find_kth_from_end(link_list, k):
