@@ -4,7 +4,7 @@ class Node():
         self.next = None
         
         
-class LinkList():
+class LinkedList():
     def __init__(self, value):
         new_node = Node(value)
         self.head = new_node
@@ -72,7 +72,7 @@ class LinkList():
                 self.tail = None
             return temp.value
         
-    def get(self,index):
+    def get(self, index):
         if index < 0  or index >= self.length:    
             return None
         else:
@@ -146,7 +146,7 @@ class LinkList():
             slow = slow.next
         return slow
     
-    def loop(self):
+    def isLoop(self):
         '''check for loop'''
         slow = fast = self.head
         while fast and fast.next:
@@ -211,7 +211,7 @@ class LinkList():
             now = now.next
             
         
-    def palindrome(self):
+    def isPalindrome(self):
         '''check for palindrome'''
         if not self.head or not self.head.next:
             return True
@@ -244,8 +244,8 @@ class LinkList():
         return True    
    
    
-def find_kth_from_end(link_list, k):
-    '''takes the LinkedList and an integer k, returns the k-th node 
+def find_kth_from_end(linked_list, k):
+    '''takes the LinkedList and integer k, returns the k-th node 
     from the end of the linked list. WITHOUT USING LENGTH'''
         
     # reason why:
@@ -263,7 +263,8 @@ def find_kth_from_end(link_list, k):
     # k = 2
     # find_kth_from_end(linklist, k) -> 4
         
-    slow = fast = link_list.head
+    slow = fast = linked_list.head
+    index = 0
     for _ in range(k):
         fast = fast.next        
         if not fast:
@@ -271,23 +272,25 @@ def find_kth_from_end(link_list, k):
     while fast:
         slow = slow.next
         fast = fast.next
+        index += 1
         # when fast reaches the end, it's still True, not None yet.
         # when slow is at the kth node, fast is None, the loop stops.
-    return slow.value
+    # get the value and its index for other purposes (remove, set_value, etc).
+    return slow.value, index
     
     
     
 
                 
             
-ll = LinkList(1)
+ll = LinkedList(1)
 ll.append(13)
 ll.append(5)
 ll.append(40)
 ll.append(35)
 ll.append(4)
 ll.print_list()
-print(ll.middle().value)
+print(find_kth_from_end(ll, 2))
      
      
      
