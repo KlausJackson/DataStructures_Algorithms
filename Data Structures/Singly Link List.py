@@ -200,7 +200,6 @@ class LinkedList():
         exist_values = set()
         pre = None
         now = self.head
-        
         while now:
             if now.value in exist_values:
                 pre.next = now.next
@@ -265,22 +264,41 @@ def find_kth_from_end(linked_list, k):
         
     slow = fast = linked_list.head
     index = 0
-    for _ in range(k):
-        fast = fast.next        
+    for _ in range(k):        
         if not fast:
             return None
+        fast = fast.next
+    if not fast:
+        return linked_list.get(0).value, 0 
+        
     while fast:
         slow = slow.next
         fast = fast.next
         index += 1
         # when fast reaches the end, it's still True, not None yet.
         # when slow is at the kth node, fast is None, the loop stops.
+    
     # get the value and its index for other purposes (remove, set_value, etc).
     return slow.value, index
     
     
-    
-
+def remove_kth_from_end(linked_list, k):
+    if k < 0:
+        return None
+    slow = fast = linked_list.head
+    for _ in range(k):
+        if not fast:
+            return None
+        fast = fast.next
+        
+    if not fast:  
+        return linked_list.pop_first()              
+    while fast.next:
+        slow = slow.next
+        fast = fast.next
+    value = slow.next.value
+    slow.next = slow.next.next    
+    return value
                 
             
 ll = LinkedList(1)
@@ -289,9 +307,10 @@ ll.append(5)
 ll.append(40)
 ll.append(35)
 ll.append(4)
-ll.print_list()
-print(find_kth_from_end(ll, 2))
-     
+
+print(find_kth_from_end(ll, 7))
+print('list:')
+ll.print_list()     
      
      
      
