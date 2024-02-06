@@ -1,7 +1,7 @@
 ---
-name: Problem & Solution request
+name: Problem-Solution request
 about: Suggest problems and solutions for this project
-title: Problem & Solution request
+title: Problem-Solution request
 labels: ''
 assignees: ''
 
