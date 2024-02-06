@@ -135,6 +135,39 @@ class LinkedList():
             else:
                 now = now.next
         return True       
+    
+    def remove_duplicates(self):  
+        '''Remove duplicates only.'''
+        exist_values = set()
+        pre = None
+        now = self.head
+        while now:
+            if now.value in exist_values:
+                pre.next = now.next
+                self.length -= 1
+            else:
+                exist_values.add(now.value)
+                pre = now
+            now = now.next
+        return True       
+            
+            
+    def remove_all_duplicates(self):
+        '''Remove duplicates and the value that has duplicates.
+        NOTE: the linked list has to be sorted first.
+        '''   
+        temp = Node()
+        temp.next = self.head  
+        now = temp
+        
+        while now.next and now.next.next:
+            if now.next.value == now.next.next.value:
+                remove_value = now.next.value
+                while now.next and now.next.value == remove_value:
+                    now.next = now.next.next    
+            else:
+                now = now.next
+        return True
             
             
     def pop(self):
@@ -188,7 +221,47 @@ class LinkedList():
         temp.next = None
         self.length -= 1
         return True
-      
+    
+    
+    def reverse_between(self, x, y):
+        '''x and y are INDEXES.
+        Linked list : 3, 8, 5, 10, 2
+        with x = 2, y = 4. 
+        Output : 3, 8, 2, 10, 5.
+        '''
+        
+        if self.length == 0 or self.length == 1:
+            return None
+        dummy = Node()
+        dummy.next = self.head
+        pre = dummy
+        for _ in range(x): 
+        # change to (x - 1) if you don't want x, y to be indexes.
+            pre = pre.next
+        now = pre.next
+        
+        for _ in range(y - x):
+            # temp is the next node to be reversed.
+            temp = now.next  
+            # Disconnect temp, point now after it.
+            now.next = temp.next
+            # Insert temp at new position after pre.
+            temp.next = pre.next
+            # Link pre to temp.
+            pre.next = temp
+        # Update list head if x = 0.   
+        self.head = dummy.next    
+        
+        # Visual example for each step of the first iteration:
+        #   8   ->   5   ->  10   ->   2
+        #  pre      now     temp    temp.next
+        
+        #   8   ->   5   ->   2       10      
+        #  pre      now              temp
+        
+        #   8   ->  10   ->   5   ->   2
+        #  pre     temp      now   
+        
 
     def partition_list(self, x):
         '''Rearrange the elements in the linked list : nodes with values less 
@@ -222,28 +295,6 @@ class LinkedList():
         self.head = head_1.next     
         
         
-    def remove_duplicate(self):  
-        # set() : built-in data type,  unordered collection of unique elements. 
-        # Example: {8, 7, 3, 11, 5}
-        # Uniqueness: try to add a duplicate, it will not be included.
-        # Unordered: cannot access elements by index.
-        # Mutable: can add and remove elements.
-        # Operations: union, intersection, difference, and symmetric difference.
-        
-        exist_values = set()
-        pre = None
-        now = self.head
-        while now:
-            if now.value in exist_values:
-                pre.next = now.next
-                self.length -= 1
-            else:
-                exist_values.add(now.value)
-                pre = now
-            now = now.next
-        return True    
-    
-        
     def isPalindrome(self):
         '''check for palindrome'''
         if not self.head or not self.head.next:
@@ -276,6 +327,31 @@ class LinkedList():
             next_half = next_half.next
         return True    
    
+
+def rotate(linked_list, k):
+    '''Rotate the list to the right by k places.
+    Input: [1, 2, 3, 4, 5], k = 2
+    Output: [4, 5, 1, 2, 3]
+    '''
+    
+    
+    
+ 
+   
+def binary_to_decimal(linked_list):
+    '''
+    Input: head = [1, 0, 1]
+    Output: 5
+    Explanation: (101) in base 2 = (5) in base 10
+    '''
+    decimal_value = 0
+    now = linked_list.head
+    while now:
+        # use the exponentiation operator (**) to compute the power of 2.
+        decimal_value = decimal_value * 2 + now.value
+        now = now.next
+    return decimal_value
+   
    
 def cycle(linked_list):
     '''check for cycle in the linked list.'''
@@ -283,6 +359,7 @@ def cycle(linked_list):
         return False
     slow = linked_list.head
     fast = linked_list.head.next
+    
     while slow != fast:
         if not fast or not fast.next:
             return False
@@ -350,44 +427,12 @@ def remove_kth_from_end(linked_list, k):
     linked_list.length -= 1   
     return value
             
-            
-# def addTwoNumbers(list_1, list_2):
-#     ''' Digits are in reverse order.
-#     Input : list_1 = [2, 4, 3], 
-#             list_2 = [5, 6, 4]
-#     Output : [7, 0, 8]
-#     Explanation : 342 + 465 = 807.
-#     '''            
-#     dummy = Node()
-#     now = dummy
-#     carry = 0
-#     head_1 = list_1.head
-#     head_2 = list_2.head
-    
-#     while list_1 or list_2 or carry:
-               
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
                 
             
 list_1 = LinkedList(1)
 list_1.append(13)
 list_1.append(5)
-list_1.append(4)
+list_1.append(40)
 list_1.append(35)
 list_1.append(4)
 
@@ -398,14 +443,9 @@ list_2.append(9)
 list_2.append(11)
 list_2.append(2)
 
-print(list_1.delete(4))
+print(list_1.reverse_between(2,4))
 list_1.print_list()     
      
-     
-     
-     
-     
-      
      
      
      
