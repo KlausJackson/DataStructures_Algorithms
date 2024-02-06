@@ -1,5 +1,5 @@
 class Node():
-    def __init__(self, value):
+    def __init__(self, value=0):
         self.value = value
         self.next = None
         
@@ -28,27 +28,6 @@ class LinkedList():
             self.tail.next = new_node
             self.tail = new_node
         self.length += 1    
-        
-            
-    def pop(self):
-        '''remove the last node'''
-        if self.length == 0:
-            return None
-        temp = pre = self.head  
-             
-        if self.length == 1:
-            self.head = None
-            self.tail = None
-        else:
-            while temp.next is not None:
-                pre = temp
-                temp = temp.next
-            self.tail = pre
-            self.tail.next = None   
-             
-        self.length -= 1
-        return temp # or temp.value.
-    
         
     def prepend(self, value):
         '''add new node to the beginning'''
@@ -87,7 +66,72 @@ class LinkedList():
         if temp is not None:
             temp.value = value
             return True
+        return False           
+            
+    def find(self, target):
+        '''get the index of that value'''
+        now = self.head
+        index = 0
+        while now:
+            if now.value == target:
+                return index
+            now = now.next
+            index += 1
         return False
+   
+    def middle(self):
+        '''find middle node'''
+        fast = slow = self.head
+        while fast and fast.next:
+            fast = fast.next.next
+            slow = slow.next
+        return slow
+    
+    def isLoop(self):
+        '''check for loop'''
+        slow = fast = self.head
+        while fast and fast.next:
+            fast = fast.next.next
+            slow = slow.next
+            if fast == slow:
+                return True
+        return False               
+    
+    def delete(self, target):
+        '''delete the node has that value'''
+        now = self.head
+        if now and now.value == target:
+            return self.pop_first()
+        pre = None
+        while now and now.value != target:
+            pre = now
+            now = now.next
+        if now is None:
+            return False
+        pre.next = now.next
+        self.length -= 1
+        return True
+            
+            
+            
+    def pop(self):
+        '''remove the last node'''
+        if self.length == 0:
+            return None
+        temp = pre = self.head  
+             
+        if self.length == 1:
+            self.head = None
+            self.tail = None
+        else:
+            while temp.next is not None:
+                pre = temp
+                temp = temp.next
+            self.tail = pre
+            self.tail.next = None   
+             
+        self.length -= 1
+        return temp # or temp.value.
     
         
     def insert(self, index, value):
@@ -131,32 +175,14 @@ class LinkedList():
         after = temp.next
         before = None
         
-        for _ in range(self.length):
+        # or use for _ in range(self.length):
+        while temp:
             after = temp.next    
             temp.next = before  
             before = temp
             temp = after
             
-   
-    def middle(self):
-        '''find middle node'''
-        fast = slow = self.head
-        while fast and fast.next:
-            fast = fast.next.next
-            slow = slow.next
-        return slow
-    
-    def isLoop(self):
-        '''check for loop'''
-        slow = fast = self.head
-        while fast and fast.next:
-            fast = fast.next.next
-            slow = slow.next
-            if fast == slow:
-                return True
-        return False
-    
-    
+
     def partition_list(self, x):
         '''rearrange the elements in the linked list : nodes with values less 
         than x appear before nodes with values greater than or equal to x.'''
@@ -164,25 +190,25 @@ class LinkedList():
         
         if self.head is None:
             return None
-        head_1 = Node(0)
-        head_2 = Node(0)
+        head_1 = Node()
+        head_2 = Node()
         # to create two separate linked lists with Node(0) as the head. 
-        # elements less than x (k). 
-        # elements greater than or equal to x (j).
+        # elements less than x (less). 
+        # elements greater than or equal to x (more).
 
         less = head_1
         more = head_2
         # used to traverse and build the two partitions.
-        current = self.head
+        now = self.head
         
-        while current is not None:
-            if current.value < x:
-                less.next = current
-                less = current
+        while now is not None:
+            if now.value < x:
+                less.next = now
+                less = now
             else:
-                more.next = current
-                more = current
-            current = current.next
+                more.next = now
+                more = now
+            now = now.next
             
         less.next = head_2.next
         more.next = None
@@ -243,6 +269,21 @@ class LinkedList():
         return True    
    
    
+def cycle(linked_list):
+    '''check for cycle in the linked list.'''
+    if not linked_list.head or not linked_list.head.next: 
+        return False
+    slow = linked_list.head
+    fast = linked_list.head.next
+    while slow != fast:
+        if not fast or not fast.next:
+            return False
+        slow = slow.next
+        fast = fast.next.next
+    # If there's a cycle, the pointers will eventually meet.    
+    return True
+   
+   
 def find_kth_from_end(linked_list, k):
     '''takes the LinkedList and integer k, returns the k-th node 
     from the end of the linked list. WITHOUT USING LENGTH'''
@@ -297,20 +338,60 @@ def remove_kth_from_end(linked_list, k):
         slow = slow.next
         fast = fast.next
     value = slow.next.value
-    slow.next = slow.next.next    
+    slow.next = slow.next.next 
+    linked_list.length -= 1   
     return value
+            
+            
+# def addTwoNumbers(list_1, list_2):
+#     ''' Digits are in reverse order.
+#     Input : list_1 = [2, 4, 3], 
+#             list_2 = [5, 6, 4]
+#     Output : [7, 0, 8]
+#     Explanation : 342 + 465 = 807.
+#     '''            
+#     dummy = Node()
+#     now = dummy
+#     carry = 0
+#     head_1 = list_1.head
+#     head_2 = list_2.head
+    
+#     while list_1 or list_2 or carry:
+               
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
                 
             
-ll = LinkedList(1)
-ll.append(13)
-ll.append(5)
-ll.append(40)
-ll.append(35)
-ll.append(4)
+list_1 = LinkedList(1)
+list_1.append(13)
+list_1.append(5)
+list_1.append(40)
+list_1.append(35)
+list_1.append(4)
 
-print(find_kth_from_end(ll, 7))
-print('list:')
-ll.print_list()     
+list_2 = LinkedList(7)
+list_2.append(25)
+list_2.append(3)
+list_2.append(9)
+list_2.append(11)
+list_2.append(2)
+
+print(list_1.reverse())
+list_1.print_list()     
      
      
      
