@@ -12,14 +12,14 @@ class LinkedList():
         self.length = 1
                 
     def print_list(self):
-        '''print the list'''
+        '''Print the list.'''
         temp = self.head
         while temp is not None:
             print(temp.value)
             temp = temp.next
             
     def append(self, value):
-        '''add a new node at the end'''
+        '''Add a new node at the end.'''
         new_node = Node(value)
         if self.head is None:
             self.head = new_node
@@ -30,7 +30,7 @@ class LinkedList():
         self.length += 1    
         
     def prepend(self, value):
-        '''add new node to the beginning'''
+        '''Add new node to the beginning.'''
         new_node = Node(value)
         new_node.next = self.head
         self.head = new_node
@@ -40,7 +40,7 @@ class LinkedList():
         return True    
             
     def pop_first(self):
-        '''remove node at the beginning''' 
+        '''Remove node at the beginning.''' 
         if self.length == 0:
             return None 
         else:  
@@ -61,7 +61,7 @@ class LinkedList():
             return temp
         
     def set_value(self, index, value):
-        '''change node's value'''
+        '''Change node's value.'''
         temp = self.get(index)
         if temp is not None:
             temp.value = value
@@ -69,7 +69,7 @@ class LinkedList():
         return False           
             
     def find(self, target):
-        '''get the index of that value'''
+        '''Get the index of that value.'''
         now = self.head
         index = 0
         while now:
@@ -80,7 +80,7 @@ class LinkedList():
         return False
    
     def middle(self):
-        '''find middle node'''
+        '''Find middle node.'''
         fast = slow = self.head
         while fast and fast.next:
             fast = fast.next.next
@@ -88,7 +88,7 @@ class LinkedList():
         return slow
     
     def isLoop(self):
-        '''check for loop'''
+        '''Check for loop.'''
         slow = fast = self.head
         while fast and fast.next:
             fast = fast.next.next
@@ -96,9 +96,21 @@ class LinkedList():
             if fast == slow:
                 return True
         return False               
+ 
+    def reverse(self):
+        temp = self.head
+        self.head = self.tail
+        self.tail = temp
+        after = temp.next
+        before = None      
+        while temp: # or for _ in range(self.length):
+            after = temp.next    
+            temp.next = before  
+            before = temp
+            temp = after 
     
     def delete(self, target):
-        '''delete the node has that value'''
+        '''Delete the first node has that value.'''
         now = self.head
         if now and now.value == target:
             return self.pop_first()
@@ -112,26 +124,36 @@ class LinkedList():
         self.length -= 1
         return True
             
+    def delete_all(self, target):
+        '''Delete all the nodes that has that value.'''
+        dummy = Node()
+        dummy.next = self.head
+        now = dummy
+        while now.next:
+            if now.next.value == target:
+                now.next = now.next.next
+            else:
+                now = now.next
+        return True       
             
             
     def pop(self):
-        '''remove the last node'''
+        '''Remove the last node.'''
         if self.length == 0:
             return None
         temp = pre = self.head  
-             
         if self.length == 1:
             self.head = None
             self.tail = None
         else:
+            
             while temp.next is not None:
                 pre = temp
                 temp = temp.next
             self.tail = pre
-            self.tail.next = None   
-             
+            self.tail.next = None      
         self.length -= 1
-        return temp # or temp.value.
+        return temp 
     
         
     def insert(self, index, value):
@@ -166,25 +188,10 @@ class LinkedList():
         temp.next = None
         self.length -= 1
         return True
-    
-    
-    def reverse(self):
-        temp = self.head
-        self.head = self.tail
-        self.tail = temp
-        after = temp.next
-        before = None
-        
-        # or use for _ in range(self.length):
-        while temp:
-            after = temp.next    
-            temp.next = before  
-            before = temp
-            temp = after
-            
+      
 
     def partition_list(self, x):
-        '''rearrange the elements in the linked list : nodes with values less 
+        '''Rearrange the elements in the linked list : nodes with values less 
         than x appear before nodes with values greater than or equal to x.'''
         # the linked list relative order remains unchanged.
         
@@ -234,7 +241,8 @@ class LinkedList():
                 exist_values.add(now.value)
                 pre = now
             now = now.next
-            
+        return True    
+    
         
     def isPalindrome(self):
         '''check for palindrome'''
@@ -379,7 +387,7 @@ def remove_kth_from_end(linked_list, k):
 list_1 = LinkedList(1)
 list_1.append(13)
 list_1.append(5)
-list_1.append(40)
+list_1.append(4)
 list_1.append(35)
 list_1.append(4)
 
@@ -390,7 +398,7 @@ list_2.append(9)
 list_2.append(11)
 list_2.append(2)
 
-print(list_1.reverse())
+print(list_1.delete(4))
 list_1.print_list()     
      
      
