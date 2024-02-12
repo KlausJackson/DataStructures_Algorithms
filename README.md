@@ -9,5 +9,5 @@ The rest of my code are solutions to some problems on [LeetCode](https://leetcod
 
 ## Note
 
-Currently status: only has Singly Linked List. <br>
+Currently status: only has Singly and Double Linked List. <br>
 I added comments in the code, they're explainations based on my understanding. <br>
