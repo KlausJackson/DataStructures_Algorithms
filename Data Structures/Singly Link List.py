@@ -5,7 +5,7 @@ class Node():
         
         
 class LinkedList():
-    def __init__(self, value):
+    def __init__(self, value = None):
         new_node = Node(value)
         self.head = new_node
         self.tail = new_node
@@ -18,7 +18,7 @@ class LinkedList():
             print(temp.value)
             temp = temp.next
             
-    def append(self, value):
+    def append(self, value: int):
         '''Add a new node at the end.'''
         new_node = Node(value)
         if self.head is None:
@@ -29,7 +29,7 @@ class LinkedList():
             self.tail = new_node
         self.length += 1    
         
-    def prepend(self, value):
+    def prepend(self, value: int):
         '''Add new node to the beginning.'''
         new_node = Node(value)
         new_node.next = self.head
@@ -51,16 +51,15 @@ class LinkedList():
                 self.tail = None
             return temp.value
         
-    def get(self, index):
-        if index < 0  or index >= self.length:    
-            return None
-        else:
+    def get(self, index: int):
+        if index > 0 and index <= self.length:     
             temp = self.head
             for _ in range(index):
                 temp = temp.next
             return temp
-        
-    def set_value(self, index, value):
+        return None
+    
+    def set_value(self, index: int, value: int):
         '''Change node's value.'''
         temp = self.get(index)
         if temp is not None:
@@ -68,7 +67,7 @@ class LinkedList():
             return True
         return False           
             
-    def find(self, target):
+    def find(self, target: int):
         '''Get the index of that value.'''
         now = self.head
         index = 0
@@ -97,17 +96,41 @@ class LinkedList():
                 return True
         return False               
  
+ 
     def reverse(self):
         temp = self.head
         self.head = self.tail
         self.tail = temp
         after = temp.next
-        before = None      
+        before = None  
+            
         while temp: # or for _ in range(self.length):
             after = temp.next    
             temp.next = before  
             before = temp
             temp = after 
+            
+ 
+    def swap_in_pairs(self):
+        '''Swap every two adjacent nodes.
+        Input: [1, 2, 3, 4]
+        Output: [2, 1, 4, 3]
+        '''
+        dummy = Node()
+        dummy.next = self.head
+        pre = dummy
+        
+        while pre.next and pre.next.next:
+            first = pre.next
+            second = pre.next.next
+            
+            pre.next = second
+            first.next = second.next
+            second.next = first
+    
+            pre = first
+        return True
+    
     
     def delete(self, target):
         '''Delete the first node has that value.'''
@@ -118,11 +141,13 @@ class LinkedList():
         while now and now.value != target:
             pre = now
             now = now.next
+            
         if now is None:
             return False
         pre.next = now.next
         self.length -= 1
         return True
+            
             
     def delete_all(self, target):
         '''Delete all the nodes that has that value.'''
@@ -135,6 +160,7 @@ class LinkedList():
             else:
                 now = now.next
         return True       
+    
     
     def remove_duplicates(self):  
         '''Remove duplicates only.'''
@@ -149,7 +175,7 @@ class LinkedList():
                 exist_values.add(now.value)
                 pre = now
             now = now.next
-        return True       
+        return True            
             
             
     def remove_all_duplicates(self):
@@ -168,7 +194,7 @@ class LinkedList():
             else:
                 now = now.next
         return True
-            
+  
             
     def pop(self):
         '''Remove the last node.'''
@@ -208,6 +234,7 @@ class LinkedList():
     
             
     def remove(self, index):
+        '''Remove at index.'''
         if index < 0  or index >= self.length:    
             return None 
         if index == 0:
@@ -328,14 +355,39 @@ class LinkedList():
         return True    
    
 
+
+def odd_even(linked_list):
+    if not linked_list.head or not linked_list.head.next:
+        return
+    else:
+        pass
+
+
 def rotate(linked_list, k):
     '''Rotate the list to the right by k places.
     Input: [1, 2, 3, 4, 5], k = 2
     Output: [4, 5, 1, 2, 3]
     '''
+    if not linked_list.head or k < 0:
+        return False
+    elif not linked_list.head.next or k == 0:
+        return True
     
+    k = k % linked_list.length
+    # k = 0 -> no rotation is needed.
+    if k == 0:
+        return True
+    # Fastest approach:
+    # Traverse to the node at position length - k % length - 1.
     
-    
+    now = linked_list.head
+    for _ in range(linked_list.length - k - 1):
+        now = now.next
+    new_head = now.next
+    now.next = None
+    linked_list.tail.next = linked_list.head
+    linked_list.head = new_head
+    return True
  
    
 def binary_to_decimal(linked_list):
@@ -347,7 +399,7 @@ def binary_to_decimal(linked_list):
     decimal_value = 0
     now = linked_list.head
     while now:
-        # use the exponentiation operator (**) to compute the power of 2.
+        # the exponentiation operator (**) to compute the power of 2.
         decimal_value = decimal_value * 2 + now.value
         now = now.next
     return decimal_value
@@ -427,6 +479,53 @@ def remove_kth_from_end(linked_list, k):
     linked_list.length -= 1   
     return value
             
+          
+
+    
+    
+def add2numbers():
+    pass
+def insertion_sort_list():
+    pass
+def split():
+    pass
+def merge():
+    pass
+def swap():
+    pass
+def max(): 
+    pass
+def min():
+    pass
+def reverse_in_groups():
+    pass
+def delete_mid():
+    pass
+def max_twin_sum():
+    pass
+def insert_GCD():
+    pass
+def random():
+    pass
+         
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
                 
             
 list_1 = LinkedList(1)
@@ -443,7 +542,7 @@ list_2.append(9)
 list_2.append(11)
 list_2.append(2)
 
-print(list_1.reverse_between(2,4))
+print(list_1.find())
 list_1.print_list()     
      
      
