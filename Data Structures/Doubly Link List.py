@@ -6,6 +6,7 @@ class Node():
         
         
 class LinkedList():
+    '''Doubly Linked List'''
     def __init__(self, value):
         new_node = Node(value)
         self.head = new_node
@@ -100,16 +101,61 @@ class LinkedList():
                 new_node.pre = before
                 before.next = new_node
                 temp.pre = new_node
+                self.length += 1
         return False
         
     def remove(self, index):
-            
+        if index >= 0 and index < self.length:
+            if index == 0:
+                return self.pop_first()
+            elif index == self.length - 1:
+                return self.pop()
+            else:
+                # temp.next.pre = temp.pre
+                # temp.pre.next = temp.next
+                temp = self.get(index)
+                before = temp.pre
+                after = temp.next
+                before.next = after
+                after.pre = before
+                temp.next = temp.pre = None
+                self.length -= 1
+                return temp
+        return         
         
+    def swap_first_last(self):
+        '''Swap the values of the first and last node.'''    
+        if not self.head or self.head == self.tail:
+            return
+        self.head.value, self.tail.value = self.tail.value, self.head.value
+        return True
+     
+    def reverse(self):
+        if not self.head:
+            return
+        temp = self.head
+        while temp:
+            temp.pre, temp.next = temp.next, temp.pre
+            # because temp.pre = temp.next 
+            # so to move to the next node
+            temp = temp.pre
+        self.head, self.tail = self.tail, self.head             
+        return True
         
-        
-        
-        
-        
+    def palindrome(self):
+        if self.length == 1:
+            return True
+        start = self.head
+        end = self.tail
+        # // largest integer that is less than/equal to the result.
+        for _ in range(self.length // 2):
+            if start.value != end.value:
+                return False
+            start = start.next
+            end = end.pre
+        return True
+    
+    def swap_in_pairs(self):
         
         
         

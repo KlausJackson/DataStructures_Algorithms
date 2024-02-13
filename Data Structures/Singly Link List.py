@@ -5,6 +5,7 @@ class Node():
         
         
 class LinkedList():
+    '''Singly Linked List'''
     def __init__(self, value = None):
         new_node = Node(value)
         self.head = new_node
@@ -86,7 +87,7 @@ class LinkedList():
             slow = slow.next
         return slow
     
-    def isLoop(self):
+    def isLoop(self):   #LEETCODE
         '''Check for loop.'''
         slow = fast = self.head
         while fast and fast.next:
@@ -96,22 +97,22 @@ class LinkedList():
                 return True
         return False               
  
- 
     def reverse(self):
+        if not self.head:
+            return 
         temp = self.head
         self.head = self.tail
         self.tail = temp
         after = temp.next
-        before = None  
-            
+        before = None   
         while temp: # or for _ in range(self.length):
             after = temp.next    
             temp.next = before  
             before = temp
             temp = after 
-            
+        return True    
  
-    def swap_in_pairs(self):
+    def swap_in_pairs(self):    #LEETCODE
         '''Swap every two adjacent nodes.
         Input: [1, 2, 3, 4]
         Output: [2, 1, 4, 3]
@@ -149,7 +150,7 @@ class LinkedList():
         return True
             
             
-    def delete_all(self, target):
+    def delete_all(self, target):   #LEETCODE
         '''Delete all the nodes that has that value.'''
         dummy = Node()
         dummy.next = self.head
@@ -160,7 +161,6 @@ class LinkedList():
             else:
                 now = now.next
         return True       
-    
     
     def remove_duplicates(self):  
         '''Remove duplicates only.'''
@@ -178,7 +178,7 @@ class LinkedList():
         return True            
             
             
-    def remove_all_duplicates(self):
+    def remove_all_duplicates(self):    #LEETCODE
         '''Remove duplicates and the value that has duplicates.
         NOTE: the linked list has to be sorted first.
         '''   
@@ -250,7 +250,7 @@ class LinkedList():
         return True
     
     
-    def reverse_between(self, x, y):
+    def reverse_between(self, x, y):    #LEETCODE
         '''x and y are INDEXES.
         Linked list : 3, 8, 5, 10, 2
         with x = 2, y = 4. 
@@ -290,7 +290,7 @@ class LinkedList():
         #  pre     temp      now   
         
 
-    def partition_list(self, x):
+    def partition_list(self, x):    #LEETCODE
         '''Rearrange the elements in the linked list : nodes with values less 
         than x appear before nodes with values greater than or equal to x.'''
         # the linked list relative order remains unchanged.
@@ -322,7 +322,7 @@ class LinkedList():
         self.head = head_1.next     
         
         
-    def isPalindrome(self):
+    def palindrome(self):   #LEETCODE
         '''check for palindrome'''
         if not self.head or not self.head.next:
             return True
@@ -356,14 +356,14 @@ class LinkedList():
    
 
 
-def odd_even(linked_list):
+def odd_even(linked_list):  #LEETCODE
     if not linked_list.head or not linked_list.head.next:
         return
     else:
         pass
 
 
-def rotate(linked_list, k):
+def rotate(linked_list, k):     #LEETCODE
     '''Rotate the list to the right by k places.
     Input: [1, 2, 3, 4, 5], k = 2
     Output: [4, 5, 1, 2, 3]
@@ -390,7 +390,7 @@ def rotate(linked_list, k):
     return True
  
    
-def binary_to_decimal(linked_list):
+def binary_to_decimal(linked_list):     #LEETCODE
     '''
     Input: head = [1, 0, 1]
     Output: 5
@@ -405,7 +405,7 @@ def binary_to_decimal(linked_list):
     return decimal_value
    
    
-def cycle(linked_list):
+def cycle(linked_list):     #LEETCODE
     '''check for cycle in the linked list.'''
     if not linked_list.head or not linked_list.head.next: 
         return False
@@ -421,7 +421,7 @@ def cycle(linked_list):
     return True
    
    
-def find_kth_from_end(linked_list, k):
+def find_kth_from_end(linked_list, k):      #LEETCODE
     '''takes the LinkedList and integer k, returns the k-th node 
     from the end of the linked list. WITHOUT USING LENGTH'''
         
@@ -460,7 +460,7 @@ def find_kth_from_end(linked_list, k):
     return slow.value, index
     
     
-def remove_kth_from_end(linked_list, k):
+def remove_kth_from_end(linked_list, k):    #LEETCODE
     if k < 0:
         return None
     slow = fast = linked_list.head
