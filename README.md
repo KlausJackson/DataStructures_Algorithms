@@ -1,5 +1,5 @@
 # DataStructures_Algorithms
-My code while learning about Data Structures and Algorithms.
+My code and notes while learning about Data Structures and Algorithms. <br>
 
 ## Credits
 
@@ -7,13 +7,20 @@ Most of my code are from the [Python Data Structures & Algorithms + LEETCODE Exe
 The instructor: [Scott Barrett](https://ascend.udemy.com/user/scott-barrett-16/) <br>
 The rest of my code are solutions to some problems on [LeetCode](https://leetcode.com/). <br>
 
-## List
+## Notable usages
 
 Singly linked list (25 LEETCODE problems, starts from line 90) <br>
+    - Dynamic memory aloocation. <br>
+    - Efficeint insertion and deletion at the begining. <br>
 Doubly linked list <br>
+    - Bi-directional traversal. <br>
+    - Efficient deletion of a node. <br>
 Stack <br>
-
-
+    - Function call management. <br>
+    - Undo/redo operations. <br>
+Queues <br>
+    - Job scheduling. <br>
+    - Breadth-first search (BFS). <br>
 
 
 ## Note

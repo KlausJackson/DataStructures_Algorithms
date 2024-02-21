@@ -1,3 +1,8 @@
+''' Notable usages :
+    Dynamic memory aloocation.
+    Efficeint insertion and deletion at the begining. 
+'''
+
 class Node():
     def __init__(self, value=0):
         self.value = value
