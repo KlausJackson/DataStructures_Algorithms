@@ -1,6 +1,6 @@
 ''' Notable usages :
-    Dynamic memory aloocation.
-    Efficeint insertion and deletion at the begining. 
+    - Dynamic memory aloocation.
+    - Efficeint insertion and deletion at the begining. 
 '''
 
 class Node():

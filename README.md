@@ -9,16 +9,16 @@ The rest of my code are solutions to some problems on [LeetCode](https://leetcod
 
 ## Notable usages
 
-Singly linked list (25 LEETCODE problems, starts from line 90) <br>
+* Singly linked list (25 LEETCODE problems, starts from line 90) <br>
     - Dynamic memory aloocation. <br>
     - Efficeint insertion and deletion at the begining. <br>
-Doubly linked list <br>
+* Doubly linked list <br>
     - Bi-directional traversal. <br>
     - Efficient deletion of a node. <br>
-Stack <br>
+* Stack <br>
     - Function call management. <br>
     - Undo/redo operations. <br>
-Queues <br>
+* Queues <br>
     - Job scheduling. <br>
     - Breadth-first search (BFS). <br>
 

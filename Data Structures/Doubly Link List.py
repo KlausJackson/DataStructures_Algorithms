@@ -1,3 +1,8 @@
+''' Notable usages:
+    - Bi-directional traversal. 
+    - Efficient deletion of a node. 
+'''
+
 class Node():
     def __init__(self, value):
         self.value = value
