@@ -155,23 +155,39 @@ class LinkedList():
             end = end.pre
         return True
     
+    
     def swap_in_pairs(self):
+        if not self.head:
+            return 
+        dummy = Node()
+        dummy.next = self.head
+        prev = dummy
+        
+        while prev.next and prev.next.next:
+            first = prev.next
+            second = prev.next.next
+            
+            prev.next = second
+            first.next = second.next
+            second.next = first
+            second.pre = prev
+            first.pre = second
+            
+            # if there's a node after 'first',
+            # update its 'pre' to point back to 'first'.
+            if first.next:
+                first.next.pre = first
+            prev = first
+        
+        self.head = dummy.next    
+        return True
         
         
         
+test = LinkedList(2)
+test.append(6)
+test.append(3)
+test.append(11)      
+ 
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+   

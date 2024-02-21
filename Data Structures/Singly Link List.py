@@ -87,16 +87,6 @@ class LinkedList():
             slow = slow.next
         return slow
     
-    def isLoop(self):   #LEETCODE
-        '''Check for loop.'''
-        slow = fast = self.head
-        while fast and fast.next:
-            fast = fast.next.next
-            slow = slow.next
-            if fast == slow:
-                return True
-        return False               
- 
     def reverse(self):
         if not self.head:
             return 
@@ -111,6 +101,17 @@ class LinkedList():
             before = temp
             temp = after 
         return True    
+    
+    def isLoop(self):   #LEETCODE
+        '''Check for loop.'''
+        slow = fast = self.head
+        while fast and fast.next:
+            fast = fast.next.next
+            slow = slow.next
+            if fast == slow:
+                return True
+        return False               
+
  
     def swap_in_pairs(self):    #LEETCODE
         '''Swap every two adjacent nodes.
@@ -483,31 +484,30 @@ def remove_kth_from_end(linked_list, k):    #LEETCODE
 
     
     
-def add2numbers():
+def add2numbers():      #LEETCODE 
     pass
-def insertion_sort_list():
+def insertion_sort_list():      #LEETCODE
     pass
-def split():
+def split():    #LEETCODE
     pass
-def merge():
+def merge():    #LEETCODE
     pass
-def swap():
+def swap():     #LEETCODE
     pass
-def max(): 
+def max():      #LEETCODE
     pass
-def min():
+def min():      #LEETCODE
     pass
-def reverse_in_groups():
+def reverse_in_groups():    #LEETCODE   
     pass
-def delete_mid():
+def delete_mid():   #LEETCODE
     pass
-def max_twin_sum():
+def max_twin_sum():     #LEETCODE
     pass
-def insert_GCD():
+def insert_GCD():   #LEETCODE
     pass
-def random():
-    pass
-         
+def random():   #LEETCODE
+    pass 
           
           
           
