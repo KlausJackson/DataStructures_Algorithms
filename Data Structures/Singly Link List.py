@@ -4,7 +4,7 @@
 '''
 
 class Node():
-    def __init__(self, value=0):
+    def __init__(self, value = 0):
         self.value = value
         self.next = None
         
@@ -547,7 +547,7 @@ list_2.append(9)
 list_2.append(11)
 list_2.append(2)
 
-print(list_1.find())
+print(list_1.find(3))
 list_1.print_list()     
      
      

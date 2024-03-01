@@ -7,7 +7,7 @@ Most of my code are from the [Python Data Structures & Algorithms + LEETCODE Exe
 The instructor: [Scott Barrett](https://ascend.udemy.com/user/scott-barrett-16/) <br>
 The rest of my code are solutions to some problems on [LeetCode](https://leetcode.com/). <br>
 
-## Notable usages
+## Data Structures
 
 * Singly linked list (25 LEETCODE problems, starts from line 90) <br>
     - Dynamic memory aloocation. <br>
@@ -22,6 +22,10 @@ The rest of my code are solutions to some problems on [LeetCode](https://leetcod
     - Job scheduling. <br>
     - Breadth-first search (BFS). <br>
 
+
+## Algorithms
+
+* Backtracking : recursively exploring all possible solutions until a valid solution is found <br>
 
 ## Note
 
