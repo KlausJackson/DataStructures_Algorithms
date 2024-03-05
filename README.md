@@ -25,7 +25,7 @@ The rest of my code are solutions to some problems on [LeetCode](https://leetcod
 
 ## Algorithms
 
-* Backtracking : recursively exploring all possible solutions until a valid solution is found <br>
+* Backtracking : recursively exploring all possible solutions until a valid solution is found. <br>
 
 ## Note
 
