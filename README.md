@@ -1,4 +1,6 @@
 # DataStructures_Algorithms
+[![Python version](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)](https://shields.io/) ![](https://img.shields.io/badge/C%2B%2B-00599C?style=flat&logo=c%2B%2B&logoColor=white) 
+![License](https://img.shields.io/badge/License-MIT-blue.svg) <br>
 My Python, C++ code and notes while learning about Data Structures and Algorithms. <br>
 
 ## Credits
