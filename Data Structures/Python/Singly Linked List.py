@@ -4,15 +4,15 @@
 '''
 
 class Node():
-    def __init__(self, value = 0):
-        self.value = value
+    def __init__(self, val = 0):
+        self.val = val
         self.next = None
         
         
 class LinkedList():
     '''Singly Linked List'''
-    def __init__(self, value = None):
-        new_node = Node(value)
+    def __init__(self, val = None):
+        new_node = Node(val)
         self.head = new_node
         self.tail = new_node
         self.length = 1
@@ -21,7 +21,7 @@ class LinkedList():
         '''Print the list.'''
         temp = self.head
         while temp is not None:
-            print(temp.value)
+            print(temp.val)
             temp = temp.next
             
     def append(self, value: int):
@@ -55,10 +55,10 @@ class LinkedList():
             self.length -= 1
             if self.length == 0:
                 self.tail = None
-            return temp.value
+            return temp.val
         
     def get(self, index: int):
-        if index > 0 and index <= self.length:     
+        if index >= 0 and index < self.length:     
             temp = self.head
             for _ in range(index):
                 temp = temp.next
@@ -78,7 +78,7 @@ class LinkedList():
         now = self.head
         index = 0
         while now:
-            if now.value == target:
+            if now.val == target:
                 return index
             now = now.next
             index += 1
@@ -142,10 +142,10 @@ class LinkedList():
     def delete(self, target):
         '''Delete the first node has that value.'''
         now = self.head
-        if now and now.value == target:
+        if now and now.val == target:
             return self.pop_first()
         pre = None
-        while now and now.value != target:
+        while now and now.val != target:
             pre = now
             now = now.next
             
@@ -174,11 +174,11 @@ class LinkedList():
         pre = None
         now = self.head
         while now:
-            if now.value in exist_values:
+            if now.val in exist_values:
                 pre.next = now.next
                 self.length -= 1
             else:
-                exist_values.add(now.value)
+                exist_values.add(now.val)
                 pre = now
             now = now.next
         return True            
@@ -315,7 +315,7 @@ class LinkedList():
         now = self.head
         
         while now is not None:
-            if now.value < x:
+            if now.val < x:
                 less.next = now
                 less = now
             else:
@@ -354,7 +354,7 @@ class LinkedList():
    
         while next_half:
             now = self.head
-            if now.value != next_half.value:
+            if now.val != next_half.val:
                 return False
             now = now.next
             next_half = next_half.next
@@ -547,9 +547,10 @@ list_2.append(9)
 list_2.append(11)
 list_2.append(2)
 
-print(list_1.find(3))
-list_1.print_list()     
-     
+list_1.print_list() 
+list_2.print_list()     
+
+
      
      
      
