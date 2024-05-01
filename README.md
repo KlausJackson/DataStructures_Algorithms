@@ -1,4 +1,10 @@
 # DataStructures_Algorithms
+[![Python version](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)](https://shields.io/) 
+![License](https://img.shields.io/badge/License-MIT-blue.svg)
+[![GitHub top language](https://img.shields.io/github/languages/top/KlausJackson/DataStructures_Algorithms?logo=github)](https://github.com/KlausJackson/DataStructures_Algorithms) 
+[![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/KlausJackson/DataStructures_Algorithms?logo=github)](https://github.com/KlausJackson/DataStructures_Algorithms) 
+[![GitHub issues](https://img.shields.io/github/issues/KlausJackson/DataStructures_Algorithms?logo=github)](https://github.com/KlausJackson/DataStructures_Algorithms)
+<br>
 My Python, C++ code and notes while learning about Data Structures and Algorithms. <br>
 
 ## Credits
