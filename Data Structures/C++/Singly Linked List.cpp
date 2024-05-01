@@ -166,8 +166,6 @@ class SLL {
 				before = temp;
 				temp = after;
 			}
-			
-			
 		}
 	
 	

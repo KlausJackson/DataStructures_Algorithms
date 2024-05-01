@@ -4,7 +4,14 @@
 [![GitHub top language](https://img.shields.io/github/languages/top/KlausJackson/DataStructures_Algorithms?logo=github)](https://github.com/KlausJackson/DataStructures_Algorithms) 
 [![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/KlausJackson/DataStructures_Algorithms?logo=github)](https://github.com/KlausJackson/DataStructures_Algorithms) 
 [![GitHub issues](https://img.shields.io/github/issues/KlausJackson/DataStructures_Algorithms?logo=github)](https://github.com/KlausJackson/DataStructures_Algorithms)
-<br>
+[![GitHub issues](https://img.shields.io/github/issues-closed/KlausJackson/DataStructures_Algorithms?logo=github)](https://github.com/KlausJackson/DataStructures_Algorithms)
+[![GitHub issues](https://img.shields.io/github/issues-pr/KlausJackson/DataStructures_Algorithms?logo=github)](https://github.com/KlausJackson/DataStructures_Algorithms)
+[![GitHub issues](https://img.shields.io/github/issues-pr-closed/KlausJackson/DataStructures_Algorithms?logo=github)](https://github.com/KlausJackson/DataStructures_Algorithms)
+
+![](https://img.shields.io/github/forks/KlausJackson/DataStructures_Algorithms.svg)
+![](https://img.shields.io/github/stars/KlausJackson/DataStructures_Algorithms.svg)
+![](https://img.shields.io/github/watchers/KlausJackson/DataStructures_Algorithms.svg)
+
 My Python, C++ code and notes while learning about Data Structures and Algorithms. <br>
 
 ## Credits
