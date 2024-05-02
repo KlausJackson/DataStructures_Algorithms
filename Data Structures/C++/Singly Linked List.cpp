@@ -182,9 +182,9 @@ int main() {
 	ll->append(9);
 	ll->append(3);	
 	
-	ll->insert(5, 99);
-	ll->reverse();
-	cout << "Index 5: " << ll->get(5)->val;
+	ll->insert(7, 99);
+	//ll->reverse();
+	//cout << "Index 5: " << ll->get(5)->val;
 	
 	cout << endl;
 	ll->print();
