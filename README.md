@@ -23,7 +23,7 @@ The instructor: [Scott Barrett](https://ascend.udemy.com/user/scott-barrett-16/)
 The rest of my code are solutions to some problems on [LeetCode](https://leetcode.com/). <br>
 
 ## How To Contact Me
-Here are my contact infos and my Patreon if you're interested in donating me... <br>
+Here are my contact infos and my Patreon if you're interested in donating me... <br> <br>
 [![Patreon](https://img.shields.io/badge/Patreon-AC7AC2?style=for-the-badge&logo=patreon&logoColor=white)](patreon.com/KlausJackson)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/KlausJackson/) 
 [![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:KlausJackson2@gmail.com)
