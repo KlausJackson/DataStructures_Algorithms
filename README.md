@@ -43,6 +43,7 @@ The rest of my code are solutions to some problems on [LeetCode](https://leetcod
 * Queues <br>
     - Job scheduling. <br>
     - Breadth-first search (BFS). <br>
+* Hash Table <br>
 
 
 ## Algorithms
