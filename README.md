@@ -36,9 +36,6 @@ I left a #LEETCODE next to every leetcode problem.
 * Singly linked list (25 LEETCODE problems) : a linear data structure where each node contains a data element and a reference (or pointer) to the next node in the list.
 
     * Common Algorithms and Problems
-        - Traversal: Iterating through the list to access or process each node.
-        - Insertion: Adding a new node at the beginning, end, or a specific position in the list.
-        - Deletion: Removing a node from the list.
         - Reversal: Reversing the order of the nodes in the list.
         - Merge/Split: Combining or dividing linked lists.
         - Cycle Detection: Detecting if the list contains a cycle (a node that points to a previous node).
@@ -64,8 +61,6 @@ I left a #LEETCODE next to every leetcode problem.
   
     * Common Algorithms and Problems
         - Bi-directional Traversal: Iterating through the list in both forward and backward directions.
-        - Insertion: Adding a new node at the beginning, end, or a specific position in the list.
-        - Deletion: Removing a node from the list.
         - Merge/Split: Combining or dividing doubly linked lists.
 
     * Pro
