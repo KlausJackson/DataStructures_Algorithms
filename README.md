@@ -33,7 +33,7 @@ The rest of my code are solutions to some problems on [LeetCode](https://leetcod
 ## Data Structures
 I left a #LEETCODE next to every leetcode problem. <br>
 
-Singly linked list (25 LEETCODE problems) : a linear data structure where each node contains a data element and a reference (or pointer) to the next node in the list. <br>
+### Singly linked list (25 LEETCODE problems) : a linear data structure where each node contains a data element and a reference (or pointer) to the next node in the list. <br>
 
 * Common Algorithms and Problems
     - Reversal: Reversing the order of the nodes in the list.
@@ -56,8 +56,8 @@ Singly linked list (25 LEETCODE problems) : a linear data structure where each n
     - Managing memory allocation and deallocation
     - Implementing undo/redo functionality
 
-<br>
-Doubly linked list : a variation of the singly linked list, where each node contains a data element and two references (or pointers) - one to the next node and one to the previous node.
+
+### Doubly linked list : a variation of the singly linked list, where each node contains a data element and two references (or pointers) - one to the next node and one to the previous node.
   
 * Common Algorithms and Problems
     - Bi-directional Traversal: Iterating through the list in both forward and backward directions.
@@ -77,8 +77,8 @@ Doubly linked list : a variation of the singly linked list, where each node cont
     - Implementing text editors and music player playlists.
     - Representing two-way relationships in databases.
 
-<br>
-Stack : a linear data structure that follows the Last-In-First-Out (LIFO) principle, where elements are added and removed from the top of the stack.
+
+### Stack : a linear data structure that follows the Last-In-First-Out (LIFO) principle, where elements are added and removed from the top of the stack.
 
 * Common Algorithms and Problems
     - Push: Adding an element to the top of the stack.
@@ -101,8 +101,8 @@ Stack : a linear data structure that follows the Last-In-First-Out (LIFO) princi
     - Undo/redo operations in text editors or design software.
     - Depth-first search (DFS) in graph algorithms.
 
-<br>
-Queues : a linear data structure that follows the First-In-First-Out (FIFO) principle, where elements are added at the rear (enqueue) and removed from the front (dequeue) of the queue.
+
+### Queues : a linear data structure that follows the First-In-First-Out (FIFO) principle, where elements are added at the rear (enqueue) and removed from the front (dequeue) of the queue.
 
 * Common Algorithms and Problems
     - Enqueue: Adding an element to the rear of the queue.
@@ -124,8 +124,8 @@ Queues : a linear data structure that follows the First-In-First-Out (FIFO) prin
     - Event handling and message queues.
     - Buffering and flow control in computer systems.
 
-<br>
-Hash Table : a data structure that uses a hash function to map keys to their corresponding values, allowing for efficient lookup, insertion, and deletion of data.
+
+### Hash Table : a data structure that uses a hash function to map keys to their corresponding values, allowing for efficient lookup, insertion, and deletion of data.
 
 * Common Algorithms and Problems
     - Hash function: Mapping keys to unique indices in the hash table.
@@ -150,8 +150,8 @@ Hash Table : a data structure that uses a hash function to map keys to their cor
     - Deduplication and data compression.
     - Solving problems that require fast lookups, such as frequency counting and unique element identification.
 
-<br>
-Graph : a non-linear data structure consisting of a set of nodes (or vertices) and a set of edges that connect these nodes, representing relationships between them.
+
+### Graph : a non-linear data structure consisting of a set of nodes (or vertices) and a set of edges that connect these nodes, representing relationships between them.
 
 * Common Algorithms and Problems
     - Graph representation: Adjacency list, adjacency matrix.
@@ -175,8 +175,8 @@ Graph : a non-linear data structure consisting of a set of nodes (or vertices) a
     - Modeling dependencies and connections in software systems.
     - Analyzing network traffic and detecting anomalies.
 
-<br>
-Tree : a hierarchical data structure that consists of a root node, parent nodes, and child nodes, with each node having zero or more child nodes.
+
+### Tree : a hierarchical data structure that consists of a root node, parent nodes, and child nodes, with each node having zero or more child nodes.
 
 * Common Algorithms and Problems
     - Tree traversal: Preorder, inorder, postorder, level-order.
@@ -200,8 +200,8 @@ Tree : a hierarchical data structure that consists of a root node, parent nodes,
     - Searching and sorting algorithms (e.g., binary search trees).
     - Decision-making processes and expert systems.
 
-<br>
-Heap 
+
+### Heap 
 
 
 
