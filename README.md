@@ -33,7 +33,8 @@ The rest of my code are solutions to some problems on [LeetCode](https://leetcod
 ## Data Structures
 I left a #LEETCODE next to every leetcode problem. <br>
 
-### Singly linked list (25 LEETCODE problems) : a linear data structure where each node contains a data element and a reference (or pointer) to the next node in the list. <br>
+### Singly linked list (25 LEETCODE problems)
+A linear data structure where each node contains a data element and a reference (or pointer) to the next node in the list. <br>
 
 * Common Algorithms and Problems
     - Reversal: Reversing the order of the nodes in the list.
@@ -57,7 +58,8 @@ I left a #LEETCODE next to every leetcode problem. <br>
     - Implementing undo/redo functionality
 
 
-### Doubly linked list : a variation of the singly linked list, where each node contains a data element and two references (or pointers) - one to the next node and one to the previous node.
+### Doubly linked list
+A variation of the singly linked list, where each node contains a data element and two references (or pointers) - one to the next node and one to the previous node.
   
 * Common Algorithms and Problems
     - Bi-directional Traversal: Iterating through the list in both forward and backward directions.
@@ -78,7 +80,8 @@ I left a #LEETCODE next to every leetcode problem. <br>
     - Representing two-way relationships in databases.
 
 
-### Stack : a linear data structure that follows the Last-In-First-Out (LIFO) principle, where elements are added and removed from the top of the stack.
+### Stack
+A linear data structure that follows the Last-In-First-Out (LIFO) principle, where elements are added and removed from the top of the stack.
 
 * Common Algorithms and Problems
     - Push: Adding an element to the top of the stack.
@@ -102,7 +105,8 @@ I left a #LEETCODE next to every leetcode problem. <br>
     - Depth-first search (DFS) in graph algorithms.
 
 
-### Queues : a linear data structure that follows the First-In-First-Out (FIFO) principle, where elements are added at the rear (enqueue) and removed from the front (dequeue) of the queue.
+### Queues
+A linear data structure that follows the First-In-First-Out (FIFO) principle, where elements are added at the rear (enqueue) and removed from the front (dequeue) of the queue.
 
 * Common Algorithms and Problems
     - Enqueue: Adding an element to the rear of the queue.
@@ -125,7 +129,8 @@ I left a #LEETCODE next to every leetcode problem. <br>
     - Buffering and flow control in computer systems.
 
 
-### Hash Table : a data structure that uses a hash function to map keys to their corresponding values, allowing for efficient lookup, insertion, and deletion of data.
+### Hash Table
+A data structure that uses a hash function to map keys to their corresponding values, allowing for efficient lookup, insertion, and deletion of data.
 
 * Common Algorithms and Problems
     - Hash function: Mapping keys to unique indices in the hash table.
@@ -151,7 +156,8 @@ I left a #LEETCODE next to every leetcode problem. <br>
     - Solving problems that require fast lookups, such as frequency counting and unique element identification.
 
 
-### Graph : a non-linear data structure consisting of a set of nodes (or vertices) and a set of edges that connect these nodes, representing relationships between them.
+### Graph
+A non-linear data structure consisting of a set of nodes (or vertices) and a set of edges that connect these nodes, representing relationships between them.
 
 * Common Algorithms and Problems
     - Graph representation: Adjacency list, adjacency matrix.
@@ -176,7 +182,8 @@ I left a #LEETCODE next to every leetcode problem. <br>
     - Analyzing network traffic and detecting anomalies.
 
 
-### Tree : a hierarchical data structure that consists of a root node, parent nodes, and child nodes, with each node having zero or more child nodes.
+### Tree
+A hierarchical data structure that consists of a root node, parent nodes, and child nodes, with each node having zero or more child nodes.
 
 * Common Algorithms and Problems
     - Tree traversal: Preorder, inorder, postorder, level-order.
