@@ -59,7 +59,7 @@ I left a #LEETCODE next to every leetcode problem.
         - Managing memory allocation and deallocation
         - Implementing undo/redo functionality
 
-<br>
+    <br>
 * Doubly linked list : a variation of the singly linked list, where each node contains a data element and two references (or pointers) - one to the next node and one to the previous node.
   
     * Common Algorithms and Problems
@@ -82,7 +82,7 @@ I left a #LEETCODE next to every leetcode problem.
         - Implementing text editors and music player playlists.
         - Representing two-way relationships in databases.
 
-<br>
+    <br>
 * Stack : a linear data structure that follows the Last-In-First-Out (LIFO) principle, where elements are added and removed from the top of the stack.
 
     * Common Algorithms and Problems
@@ -106,7 +106,7 @@ I left a #LEETCODE next to every leetcode problem.
         - Undo/redo operations in text editors or design software.
         - Depth-first search (DFS) in graph algorithms.
 
-<br>
+    <br>
 * Queues : a linear data structure that follows the First-In-First-Out (FIFO) principle, where elements are added at the rear (enqueue) and removed from the front (dequeue) of the queue.
 
     * Common Algorithms and Problems
@@ -129,7 +129,7 @@ I left a #LEETCODE next to every leetcode problem.
         - Event handling and message queues.
         - Buffering and flow control in computer systems.
 
-<br>
+    <br>
 * Hash Table : a data structure that uses a hash function to map keys to their corresponding values, allowing for efficient lookup, insertion, and deletion of data.
 
     * Common Algorithms and Problems
@@ -155,7 +155,7 @@ I left a #LEETCODE next to every leetcode problem.
         - Deduplication and data compression.
         - Solving problems that require fast lookups, such as frequency counting and unique element identification.
 
-<br>
+    <br>
 * Graph : a non-linear data structure consisting of a set of nodes (or vertices) and a set of edges that connect these nodes, representing relationships between them.
 
     * Common Algorithms and Problems
@@ -180,7 +180,7 @@ I left a #LEETCODE next to every leetcode problem.
         - Modeling dependencies and connections in software systems.
         - Analyzing network traffic and detecting anomalies.
 
-<br>
+    <br>
 * Tree : a hierarchical data structure that consists of a root node, parent nodes, and child nodes, with each node having zero or more child nodes.
 
     * Common Algorithms and Problems
@@ -205,7 +205,7 @@ I left a #LEETCODE next to every leetcode problem.
         - Searching and sorting algorithms (e.g., binary search trees).
         - Decision-making processes and expert systems.
 
-<br>
+    <br>
 * Heap 
 
 
