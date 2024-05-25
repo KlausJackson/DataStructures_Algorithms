@@ -45,6 +45,13 @@ The rest of my code are solutions to some problems on [LeetCode](https://leetcod
     - Breadth-first search (BFS). <br>
 * Hash Table <br>
 
+* Graph <br>
+
+* Tree
+
+* Heap <br>
+
+
 
 ## Algorithms
 * Backtracking : recursively exploring all possible solutions until a valid solution is found. <br>
