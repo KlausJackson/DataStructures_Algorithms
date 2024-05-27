@@ -142,11 +142,16 @@ def ways(m, coins):
                 continue  
             memo[i] = memo[i] + memo[subproblem]
 
-
     return memo[m]
 ```
+`memo[i]` : number of ways to make the amount i (money) using the coins.
+`memo[subproblem]` : number of ways to make the remaining amount subproblem using the coins.
 
-A little extra from me: what if we're asked what's the solutions for each way or we're also given `k` for number of coins that we're only allowed to exchange to?
+**Small example**: we need to make the amount 5 cents, we have a coin worth 3 cents, we can:
+- Use the 3 cent coin (1 way), find number of ways to make the reamining 2 cents (subproblem).
+- Add number of ways to make 2 cents to the number of ways to make 5 cents. This is combining the 3 cent coin with ways to make 2 cents.
+
+**A little extra from me**: what if we're asked what's the solutions for each way or we're also given `k` for number of coins that we're only allowed to exchange to?
 
 We can create another dict to store the solutions.
 
