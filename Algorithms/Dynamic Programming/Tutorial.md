@@ -144,8 +144,8 @@ def ways(m, coins):
 
     return memo[m]
 ```
-`memo[i]` : number of ways to make the amount i (money) using the coins.
-`memo[subproblem]` : number of ways to make the remaining amount subproblem using the coins.
+`memo[i]` : number of ways to make the amount i (money) using the coins. <br>
+`memo[subproblem]` : number of ways to make the remaining amount subproblem using the coins. <br>
 
 **Small example**: we need to make the amount 5 cents, we have a coin worth 3 cents, we can:
 - Use the 3 cent coin (1 way), find number of ways to make the reamining 2 cents (subproblem).

@@ -152,6 +152,26 @@ class SLL {
 			delete temp;
 			length--;
 		}
+		
+		void remove(int x) {
+// remove every node has value x.
+			while (head->val == x) pop_first(); 
+			Node* pre = head;
+			Node* temp = head->next;
+			while (temp) {
+				if (temp->val == x)	{
+					pre->next = temp->next;
+					delete temp;
+					temp = pre->next;
+					length--;
+// add `return` here if you only need to remove the
+// first node that has value x.
+				} else {
+						pre = temp;
+						temp = temp->next;					
+				}
+			}
+		}		
 	
 		void reverse() {
 			Node* temp = head;
