@@ -7,10 +7,11 @@
 [![GitHub issues](https://img.shields.io/github/issues-closed/KlausJackson/DataStructures_Algorithms?logo=github)](https://github.com/KlausJackson/DataStructures_Algorithms)
 [![GitHub issues](https://img.shields.io/github/issues-pr/KlausJackson/DataStructures_Algorithms?logo=github)](https://github.com/KlausJackson/DataStructures_Algorithms)
 [![GitHub issues](https://img.shields.io/github/issues-pr-closed/KlausJackson/DataStructures_Algorithms?logo=github)](https://github.com/KlausJackson/DataStructures_Algorithms)
+![GitHub last commit](https://img.shields.io/github/last-commit/KlausJackson/DataStructures_Algorithms?style=plastic)
 
-![](https://img.shields.io/github/forks/KlausJackson/DataStructures_Algorithms.svg)
-![](https://img.shields.io/github/stars/KlausJackson/DataStructures_Algorithms.svg)
-![](https://img.shields.io/github/watchers/KlausJackson/DataStructures_Algorithms.svg)
+![Github forks](https://img.shields.io/github/forks/KlausJackson/DataStructures_Algorithms.svg)
+![Github stars](https://img.shields.io/github/stars/KlausJackson/DataStructures_Algorithms.svg)
+![Github watchers](https://img.shields.io/github/watchers/KlausJackson/DataStructures_Algorithms.svg)
 
 My Python, C++ code and notes while learning about Data Structures and Algorithms. <br>
 
