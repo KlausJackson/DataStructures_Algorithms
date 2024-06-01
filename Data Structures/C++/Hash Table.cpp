@@ -1,7 +1,6 @@
 #include <iostream>
 using namespace std;
 
-
 class Node {
 	public:
 		string key;
@@ -36,8 +35,8 @@ class HashTable {
 		int hash(string key) {
 			int hash = 0;
 			for (int i = 0; i < key.length(); i++) {
-				int asciiValue = int(key[i]);
-				hash = (hash + asciiValue * 23) % SIZE;
+				// int(key[i]) to get the ASCII value of the character.
+				hash = (hash + int(key[i]) * 23) % SIZE;
 // 23 (prime number) to make the result more random.
 			}
 			return hash;

@@ -6,7 +6,6 @@ using namespace std;
 // vector, linked list
 // I'll use linked list in this file.
 
-
 class Node {
 	public:
 		int val;
@@ -29,6 +28,14 @@ class Stack {
 			Node* newnode = new Node(val);
 			top = newnode;
 			height = 1;
+		}
+
+		~Stack() {
+			while (top) {
+				Node* temp = top;
+				top = top->next;
+				delete temp;
+			}
 		}
 		
 		void print() {
