@@ -1,12 +1,4 @@
-''' Notable usages :
-    - Function call management.
-    - Undo/redo operations. 
-'''
-
-''' Short way to remember and to differentiate with Queues:
-    Stacks: first in, last out (a can of tennis ball).
-    Queues: first in, frst out (a line of people waiting for something).
-'''
+# Last In First Out - LIFO.
 
 class Node():
     def __init__(self, value = 0):

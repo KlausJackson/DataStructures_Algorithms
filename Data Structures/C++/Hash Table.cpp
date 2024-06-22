@@ -45,17 +45,22 @@ class HashTable {
 		void set(string key, int val) {
 			int index = hash(key);
 			Node* newnode = new Node(key, val);
-			if (dataMap[index] == NULL) {
-				dataMap[index] = newnode;
-			} else {
+			if (dataMap[index] == NULL) dataMap[index] = newnode;
+			else {
 				Node* temp = dataMap[index];
-				while (temp->next) {
-					temp = temp->next;
-				}
+				while (temp->next) temp = temp->next;
 				temp->next = newnode;
 			}
 		}
-	
+
+
+
+
+
+
+
+
+
 };
 
 int main() {
