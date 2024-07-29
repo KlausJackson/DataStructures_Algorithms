@@ -23,7 +23,7 @@ Most of my code are from the following source on Udemy:
 - [Python Data Structures & Algorithms + LEETCODE Exercises](https://ascend.udemy.com/course/data-structures-algorithms-python)
 - [C++ Data Structures & Algorithms + LEETCODE Exercises](https://ascend.udemy.com/course/data-structures-algorithms-cpp)
 
-The instructor: [Scott Barrett](https://ascend.udemy.com/user/scott-barrett-16/)
+The instructor: [Scott Barrett](https://ascend.udemy.com/user/scott-barrett-16/) <br>
 The rest of my code are solutions to some problems on [LeetCode](https://leetcode.com/).
 
 ## How To Contact Me
@@ -37,7 +37,7 @@ The rest of my code are solutions to some problems on [LeetCode](https://leetcod
 
 ## Data Structures
 
-I left a #LEETCODE next to every leetcode problem.
+I left a #LEETCODE and its corresponding number next to every leetcode problem.
 
 ### Singly linked list (25 LEETCODE problems)
 
@@ -82,7 +82,7 @@ A variation of the singly linked list, where each node contains a data element a
 - Bi-directional traversal: Allows for efficient navigation in both forward and backward directions.
 - Efficient deletion of a node: The previous and next nodes can be easily updated to bypass the deleted node.
 
-***Cons:**
+**Cons:**
 
 - Additional memory overhead: Each node must store two pointers instead of one.
 - Slightly more complex to implement compared to singly linked lists.
